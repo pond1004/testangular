@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReactiveFormComponent } from './reactive-form.component';
+import { FormPirapatRComponent } from './form-pirapat-r.component';
 
-describe('ReactiveFormComponent', () => {
-  let component: ReactiveFormComponent;
-  let fixture: ComponentFixture<ReactiveFormComponent>;
+describe('FormPirapatRComponent', () => {
+  let component: FormPirapatRComponent;
+  let fixture: ComponentFixture<FormPirapatRComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReactiveFormComponent ]
+      declarations: [ FormPirapatRComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReactiveFormComponent);
+    fixture = TestBed.createComponent(FormPirapatRComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
