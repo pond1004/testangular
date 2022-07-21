@@ -76,39 +76,45 @@
   <p>Angular ReactiveForm Test</p>
   <form  [formGroup]="infoData3"  style="border: red solid">
     <div class="container" >
+      <label >InfoData 3 OutForm</label>
+<!--Out A,B,C-->
       <div class="form-row">
-        <div class="col-sm-3"><input class="form-control" type="text" placeholder="a" aria-label="default input example" formControlName="a"></div>
-        <div class="col-sm-3"><input class="form-control" type="text" placeholder="b" aria-label="default input example" formControlName="b"></div>
-        <div class="col-sm-3"><input class="form-control" type="text" placeholder="c" aria-label="default input example" formControlName="c"></div>
+        <div class="col-sm-3">A:<input class="form-control" type="text" placeholder="a" aria-label="default input example" formControlName="A"></div>
+        <div class="col-sm-3">B:<input class="form-control" type="text" placeholder="b" aria-label="default input example" formControlName="B"></div>
+        <div class="col-sm-3">C:<input class="form-control" type="text" placeholder="c" aria-label="default input example" formControlName="C"><br></div>
       </div>
+<!--Out D,E,F-->
       <div class="form-row">
-        <div class="col-7"><input class="form-control" type="text" placeholder="D" aria-label="default input example" formControlName="d"></div>
-        <div class="col"><input class="form-control" type="text" placeholder="E" aria-label="default input example" formControlName="e"></div>
-        <div class="col"><input class="form-control" type="text" placeholder="F" aria-label="default input example" formControlName="f"></div>
+        <div class="col-7">D:<input class="form-control" type="text" placeholder="D" aria-label="default input example" formControlName="D"></div>
+        <div class="col">E:<input class="form-control" type="text" placeholder="E" aria-label="default input example" formControlName="E"></div>
+        <div class="col">F:<input class="form-control" type="text" placeholder="F" aria-label="default input example" formControlName="F"><br></div>
       </div>
+<!--InArray G,H,Info-->
       <div class="container">
         <table class="table table-striped" formArrayName="FormArrayInfoData3">
-          <tr class="HeadInfoData2">
-              <!--หัวเรื่อง-->
-              <th>Add FormArray3</th>
-              <!--Add FormArray-->
-              <th><div class="form-row">
-                      <button type="button" (click)="AddInfoData3()" class="btn btn-info">ปุ่ม Add infoData3</button>
-                  </div>
+            <tr class="form-row">
+              <th lass="col-sm-8">
+                <!--หัวเรื่อง-->
+                <div><label >Add FormArray3 & AddData3 InForm</label></div>
               </th>
-          </tr>
+              <th class="col-sm">
+                <div >
+                  <!--Add <FormArray-->
+                  <button type="button" (click)="AddInfoData3()" class="btn btn-info">ปุ่ม Add infoData3</button>
+                </div>
+              </th>
+
+            </tr>
             <tr *ngFor="let detailInfoData3 of FormArrayInfoData3.controls; let i=index" [formGroupName]="i" >
 
               <td>
-                F:
-                <input type="text"  placeholder="F" formControlName="f">
+                G:<input type="text"  placeholder="G" formControlName="G">
               </td>
               <td>
-                G:
-                <input type="text"  placeholder="G " formControlName="g">
+                H:<input type="text"  placeholder="H " formControlName="H">
               </td>
               <td>
-                <select class="form-option" formControlName="subject_id">
+                <select class="form-option" formControlName="INFORM">
                   <option value="AAAAA">AAAAA</option>
                   <option value="BBBBB">BBBBB</option>
                   <option value="xxxxx">xxxxx</option>
@@ -123,8 +129,51 @@
           </tr>
         </table>
       </div>
+<!--check-->
+      <div class="form-row">
+        <div class="col-sm-1">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="inlineCheckbox1">CheckIn</label>
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="CheckIn" formControlName="inlineCheckbox1" style="margin-left: 0.3rem;">
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="inlineCheckbox2">CheckIn</label>
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="CheckIn" formControlName="inlineCheckbox2" style="margin-left: 0.3rem;">
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="inlineCheckbox3">CheckIn</label>
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="CheckIn" formControlName="inlineCheckbox3" style="margin-left: 0.3rem;">
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="inlineCheckbox4">CheckIn</label>
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="CheckIn" formControlName="inlineCheckbox4" style="margin-left: 0.3rem;">
+          </div>
+        </div>
+<!--        <div class="col-sm" >-->
+<!--          <form>-->
+<!--              <p>Group Select</p>-->
+<!--              <div class="form-check form-check-inline">-->
+<!--                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">-->
+<!--                <label class="form-check-label" for="inlineRadio1">1</label>-->
+<!--                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" >-->
+<!--                <label class="form-check-label" for="inlineRadio2">2</label>-->
+<!--                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >-->
+<!--                &lt;!&ndash;disabled ใส่ใน input&ndash;&gt;-->
+<!--                <label class="form-check-label" for="inlineRadio3">3 </label>-->
+<!--              </div>-->
+<!--          </form>-->
+<!--        </div>-->
+      </div>
     </div>
   </form>
+
+<!--  button Sub&clear-->
   <div class="form-row">
     <div class="col-sm-2"><button class="btn btn-info" (click)="SubmitAddInfoData3()">Send Form3</button></div>
     <div class="col-sm"><button class="btn btn-warning" (click)="ResetForm()">Reset Form</button></div>

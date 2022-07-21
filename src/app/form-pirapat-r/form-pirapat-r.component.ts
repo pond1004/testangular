@@ -40,12 +40,16 @@ export class FormPirapatRComponent implements OnInit {
       FormArrayInfoData2: this.fb.array([]),
     });
     this.infoData3 = this.fb.group({
-      a:'',
-      b:'',
-      c:'',
-      d:'',
-      e:'',
-      f:'',
+      A:'',
+      B:'',
+      C:'',
+      D:'',
+      E:'',
+      F:'',
+      inlineCheckbox1:'',
+      inlineCheckbox2:'',
+      inlineCheckbox3:'',
+      inlineCheckbox4:'',
       FormArrayInfoData3: this.fb.array([]),
     });
     this.myForm = this.fb.group({
@@ -68,11 +72,14 @@ export class FormPirapatRComponent implements OnInit {
     //  return ค่ากลับมาเก็บ ใน FormGroup And
     return this.infoData2.get("FormArrayInfoData2") as FormArray
   }
+  //Method NewFormArrayInfoData3 เป็น FormGroup เพื่อเก็บ FormControlName,FormArrayName หลังจากกดปุ่ม AddInfoData3
   NewFormArrayInfoData3(): FormGroup{
     return this.fb.group({
-      f:'',
-      g:'',
-      subject_id:'',
+      //FormControlName
+      G:'',
+      H:'',
+      // FormArrayName
+      INFORM:'',
     });
   }
   //  สร้าง method ใหม่เพื่อเก็บค่าเป็น FormGroup
